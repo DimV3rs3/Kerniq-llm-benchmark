@@ -1,0 +1,13 @@
+plugin_id = "llm-benchmark"
+name = "LLM benchmark"
+version = "0.1.1"
+api_version = "1.0"
+manifest_version = "1.0"
+entry_point = "main.PluginImpl"
+description = "Benchmarks the selected provider's models in sequence and writes the report under the workspace benchmarks folder."
+capabilities = ["tools"]
+author = "Kerniq"
+license = "MIT"
+
+[tools]
+expose_to_agent = false
