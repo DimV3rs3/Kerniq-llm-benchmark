@@ -415,7 +415,7 @@ class PluginImpl(Plugin):
         self._manifest = PluginManifest(
             plugin_id="llm-benchmark",
             name="LLM benchmark",
-            version="0.1.1",
+            version="0.1.2",
             api_version="1.0",
             manifest_version="1.0",
             entry_point="main.PluginImpl",
@@ -698,7 +698,7 @@ class PluginImpl(Plugin):
                             one["load_seconds"] = switched["seconds"] if slot_index == 1 else 0
                             model_rows.append(one)
                     # The model finished every task. Unload it and prove it is gone
-                    # before the next catalog model — including a model the user had loaded.
+                    # before the next catalog model – including a model the user had loaded.
                     try:
                         await self._quiesce(provider, api)
                     except Exception as exc:
